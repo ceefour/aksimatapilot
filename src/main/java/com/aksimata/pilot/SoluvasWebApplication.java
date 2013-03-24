@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.wicket.Page;
 import org.apache.wicket.atmosphere.EventBus;
 import org.apache.wicket.protocol.http.WebApplication;
+import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +26,8 @@ public class SoluvasWebApplication extends WebApplication {
 	@Override
 	protected void init() {
 		super.init();
+		getComponentInstantiationListeners().add(
+				new SpringComponentInjector(this));
 		eventBus = new EventBus(this);
 		scheduleExecutor = Executors.newSingleThreadScheduledExecutor();
 		scheduleExecutor.scheduleWithFixedDelay(new Runnable() {
