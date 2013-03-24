@@ -1,0 +1,4 @@
+h1. AksiMata Pilot
+
+Experimental web project with Soluvas Framework, Soluvas Web, Wicket, Atmosphere, Spring, running on Tomcat 7.
+
