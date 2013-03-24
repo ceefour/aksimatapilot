@@ -2,3 +2,12 @@ h1. AksiMata Pilot
 
 Experimental web project with Soluvas Framework, Soluvas Web, Wicket, Atmosphere, Spring, running on Tomcat 7.
 
+h2. Running from Command Line
+
+With Tomcat 7 (supports WebSocket):
+
+bc. mvn tomcat7:run
+
+With Jetty 9 ("not yet support WebSocket before Atmosphere 1.0.13":https://github.com/Atmosphere/atmosphere/issues/952 ):
+
+bc. mvn jetty:run
