@@ -11,11 +11,13 @@ import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 /**
  * @author ceefour
  *
  */
+@Component("webApp")
 public class SoluvasWebApplication extends WebApplication {
 	
 	private static final Logger log = LoggerFactory
