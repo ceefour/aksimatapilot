@@ -1,7 +1,5 @@
 package com.aksimata.pilot;
 
-import java.io.IOException;
-import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -13,20 +11,16 @@ import java.util.concurrent.ScheduledFuture;
 
 import javax.annotation.Nullable;
 
-import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.wicket.RuntimeConfigurationType;
 import org.apache.wicket.ajax.AjaxRequestTarget;
-import org.apache.wicket.ajax.form.AjaxFormComponentUpdatingBehavior;
+import org.apache.wicket.ajax.form.OnChangeAjaxBehavior;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.LoadableDetachableModel;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.model.util.ListModel;
-import org.apache.wicket.protocol.http.BufferedWebResponse;
-import org.apache.wicket.request.http.WebRequest;
 import org.apache.wicket.request.http.WebResponse;
 import org.apache.wicket.request.http.WebResponse.CacheScope;
 import org.apache.wicket.util.time.Duration;
@@ -175,8 +169,7 @@ public class HomePageku extends WebPage {
 				return choice.toLanguageTag();
 			}
 		});
-		localeSelect.getSettings().setMinimumInputLength(1);
-		localeSelect.add(new AjaxFormComponentUpdatingBehavior("onchange") {
+		localeSelect.add(new OnChangeAjaxBehavior() {
 			@Override
 			protected void onUpdate(AjaxRequestTarget target) {
 				log.info("Locale single select is {}", localeModel.getObject());
@@ -218,13 +211,12 @@ public class HomePageku extends WebPage {
 				return choice.toLanguageTag();
 			}
 		});
-		localesSelect.add(new AjaxFormComponentUpdatingBehavior("onchange") {
+		localesSelect.add(new OnChangeAjaxBehavior() {
 			@Override
 			protected void onUpdate(AjaxRequestTarget target) {
 				log.info("Locales multi select is {}", localesModel.getObject());
 			}
 		});
-		localesSelect.getSettings().setMinimumInputLength(1);
 		add(localesSelect);
 	}
 

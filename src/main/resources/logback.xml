@@ -12,10 +12,7 @@
 	<logger name="id.co" level="DEBUG" />
 	<logger name="org.soluvas" level="DEBUG" />
 	<logger name="com.soluvas" level="DEBUG" />
-	<logger name="com.tuneeca" level="DEBUG" />
-	<logger name="com.nignag" level="DEBUG" />
-	<logger name="com.berbatik" level="DEBUG" />
-	<logger name="com.cintalama" level="DEBUG" />
+	<logger name="com.hendyirawan" level="DEBUG" />
 	<logger name="com.aksimata" level="DEBUG" />
 
 	<root level="INFO">
