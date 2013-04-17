@@ -2,6 +2,7 @@ package com.aksimata.pilot;
 
 import java.io.IOException;
 import java.util.Properties;
+import java.util.Random;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -84,16 +85,20 @@ public class SoluvasWebApplication extends WebApplication {
 				eventBus.post(new DateTime());
 			}
 		}, 1, 3, TimeUnit.SECONDS);
+		final Random random = new Random();
 		scheduleExecutor.scheduleWithFixedDelay(new Runnable() {
 			@Override
 			public void run() {
-				eventBus.post(new Integer(1));
+				final int value = random.nextInt(101);
+				log.debug("Sending integer {}", value);
+				eventBus.post(value);
 			}
 		}, 2, 4, TimeUnit.SECONDS);
 	}
 	
 	@Override
 	protected void onDestroy() {
+		scheduleExecutor.shutdown();
 		super.onDestroy();
 	}
 	
