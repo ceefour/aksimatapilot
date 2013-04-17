@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.apache.wicket.Component;
 import org.apache.wicket.Page;
+import org.apache.wicket.markup.head.CssHeaderItem;
 import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.head.filter.HeaderResponseContainer;
 import org.apache.wicket.markup.html.WebMarkupContainer;
@@ -13,6 +14,8 @@ import org.apache.wicket.markup.html.link.AbstractLink;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.util.string.StringValue;
+
+import com.aksimata.pilot.skin.FixBootstrapStylesCssResourceReference;
 
 import de.agilecoders.wicket.Bootstrap;
 import de.agilecoders.wicket.markup.html.bootstrap.behavior.BootstrapBaseBehavior;
@@ -40,7 +43,7 @@ import de.agilecoders.wicket.settings.ITheme;
  */
 public class BasePage extends WebPage {
 	
-	public BasePage() {
+	public BasePage(final PageParameters parameters) {
 		super();
 		add(new HtmlTag("html"));
 		
@@ -163,7 +166,7 @@ public class BasePage extends WebPage {
     public void renderHead(IHeaderResponse response) {
         super.renderHead(response);
 
-//        response.render(CssHeaderItem.forReference(FixBootstrapStylesCssResourceReference.INSTANCE));
+        response.render(CssHeaderItem.forReference(FixBootstrapStylesCssResourceReference.INSTANCE));
 //        response.render(new FilteredHeaderItem(JavaScriptHeaderItem.forReference(ApplicationJavaScript.INSTANCE), "footer-container"));
 
 //        if ("google".equalsIgnoreCase(activeTheme().name())) {

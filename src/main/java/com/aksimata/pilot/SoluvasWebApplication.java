@@ -10,6 +10,7 @@ import org.apache.wicket.Page;
 import org.apache.wicket.WicketRuntimeException;
 import org.apache.wicket.atmosphere.EventBus;
 import org.apache.wicket.protocol.http.WebApplication;
+import org.apache.wicket.request.resource.CssResourceReference;
 import org.apache.wicket.request.resource.JavaScriptResourceReference;
 import org.apache.wicket.request.resource.caching.FilenameWithVersionResourceCachingStrategy;
 import org.apache.wicket.request.resource.caching.version.MessageDigestResourceVersion;
@@ -20,6 +21,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import com.aksimata.pilot.skin.FixBootstrapStylesCssResourceReference;
 import com.google.javascript.jscomp.CompilationLevel;
 
 import de.agilecoders.wicket.Bootstrap;
@@ -30,6 +32,7 @@ import de.agilecoders.wicket.markup.html.bootstrap.extensions.html5player.Html5P
 import de.agilecoders.wicket.markup.html.bootstrap.extensions.html5player.Html5PlayerJavaScriptReference;
 import de.agilecoders.wicket.markup.html.bootstrap.extensions.icon.OpenWebIconsCssReference;
 import de.agilecoders.wicket.markup.html.bootstrap.extensions.jqueryui.JQueryUIJavaScriptReference;
+import de.agilecoders.wicket.markup.html.references.BootstrapPrettifyCssReference;
 import de.agilecoders.wicket.markup.html.references.ModernizrJavaScriptReference;
 import de.agilecoders.wicket.markup.html.themes.google.GoogleTheme;
 import de.agilecoders.wicket.markup.html.themes.metro.MetroTheme;
@@ -71,6 +74,7 @@ public class SoluvasWebApplication extends WebApplication {
         //StaticResourceRewriteMapper.withBaseUrl("http://wb.agile-coders.de").install(this);
 		
 		mountPage("/base", BasePage.class);
+		mountPage("/progress", ProgressPage.class);
 
 		// other stuff
 		scheduleExecutor = Executors.newSingleThreadScheduledExecutor();
@@ -143,10 +147,10 @@ public class SoluvasWebApplication extends WebApplication {
                                           OpenWebIconsCssReference.instance()
         );
 
-//        getResourceBundles().addCssBundle(SoluvasWebApplication.class, "application.css",
-//                                          (CssResourceReference) BootstrapPrettifyCssReference.INSTANCE,
-//                                          FixBootstrapStylesCssResourceReference.INSTANCE
-//        );
+        getResourceBundles().addCssBundle(SoluvasWebApplication.class, "application.css",
+                                          (CssResourceReference) BootstrapPrettifyCssReference.INSTANCE,
+                                          FixBootstrapStylesCssResourceReference.INSTANCE
+        );
     }
 
     /**
