@@ -76,6 +76,8 @@ public class SoluvasWebApplication extends WebApplication {
 		
 		mountPage("/base", BasePage.class);
 		mountPage("/progress", ProgressPage.class);
+		mountPage("/t/${tenantId}/${tenantEnv}/multi", MultitenantPage.class);
+		mountPage("/t/${tenantId}/${tenantEnv}/place", MultitenantPlacePage.class);
 
 		// other stuff
 		scheduleExecutor = Executors.newSingleThreadScheduledExecutor();
