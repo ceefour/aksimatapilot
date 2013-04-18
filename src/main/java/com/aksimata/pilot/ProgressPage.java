@@ -30,7 +30,7 @@ public class ProgressPage extends BasePage {
     public ProgressPage(PageParameters parameters) {
         super(parameters);
         
-		progressBar = new ProgressBar("progressBar", progressValueModel).striped(true);
+		progressBar = new ProgressBar("progressBar", progressValueModel).active(true).striped(true);
 		progressBar.setOutputMarkupId(true);
         add(progressBar);
 
