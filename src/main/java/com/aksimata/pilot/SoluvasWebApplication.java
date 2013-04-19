@@ -62,8 +62,6 @@ public class SoluvasWebApplication extends WebApplication {
 				new SpringComponentInjector(this));
 		eventBus = new EventBus(this);
 		
-		Bootstrap.install(this, new BootstrapSettings());
-		
         // deactivate ajax debug mode
         getDebugSettings().setAjaxDebugModeEnabled(false);
 
