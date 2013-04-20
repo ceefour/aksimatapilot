@@ -77,7 +77,6 @@
 		<dependency>
 		    <groupId>com.vaynberg.wicket.select2</groupId>
 		    <artifactId>wicket-select2</artifactId>
-		    <version>2.2.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.wicket</groupId>
