@@ -7,6 +7,7 @@ import org.apache.wicket.request.cycle.RequestCycle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.soluvas.commons.tenant.TenantRef;
+import org.soluvas.commons.tenant.TenantRefImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -25,7 +26,7 @@ public class AppConfig {
 		final List<String> segments = url.getSegments();
 		log.info("segments {}", segments);
 		if (segments.size() >= 3 && segments.get(0).equals("t")) {
-			return new TenantRef(segments.get(1), segments.get(1), segments.get(2));
+			return new TenantRefImpl(segments.get(1), segments.get(1), segments.get(2));
 		} else {
 			log.warn("{} is not multitenant URI", url);
 			return null;
