@@ -62,6 +62,10 @@
 	</dependencyManagement>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.soluvas</groupId>
+			<artifactId>org.soluvas.jaxrs</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>de.agilecoders.wicket</groupId>
@@ -102,11 +106,6 @@
 			<artifactId>spring-web</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>org.soluvas</groupId>
-			<artifactId>org.soluvas.jaxrs</artifactId>
-		</dependency>
-
 		<!-- <dependency> -->
 		<!-- <groupId>org.soluvas</groupId> -->
 		<!-- <artifactId>org.soluvas.web.login</artifactId> -->
@@ -131,7 +130,6 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
-			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -201,7 +199,14 @@
 			<!-- for live site -->
 		    <groupId>com.logentries</groupId>
 		    <artifactId>logentries-appender</artifactId>
-		    <version>1.1.11</version>
+		    <version>1.1.15</version>
+		    <scope>runtime</scope>
+		</dependency>		
+		<dependency>
+			<!-- for development site -->
+		    <groupId>de.huxhorn.lilith</groupId>
+		    <artifactId>de.huxhorn.lilith.slf4j</artifactId>
+		    <version>0.9.43</version>
 		    <scope>runtime</scope>
 		</dependency>		
 		<dependency>
