@@ -205,8 +205,8 @@
 		<dependency>
 			<!-- for development site -->
 		    <groupId>de.huxhorn.lilith</groupId>
-		    <artifactId>de.huxhorn.lilith.slf4j</artifactId>
-		    <version>0.9.43</version>
+		    <artifactId>de.huxhorn.lilith.logback.appender.multiplex-classic</artifactId>
+		    <version>0.9.42.1</version>
 		    <scope>runtime</scope>
 		</dependency>		
 		<dependency>
