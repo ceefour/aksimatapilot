@@ -15,6 +15,7 @@
 	<logger name="com.soluvas" level="DEBUG" />
 	<logger name="com.hendyirawan" level="DEBUG" />
 	<logger name="com.aksimata" level="DEBUG" />
+	<logger name="org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider" level="WARN"/>
 
 	<root level="INFO">
 		<appender-ref ref="STDOUT" />
