@@ -25,22 +25,22 @@ import org.springframework.stereotype.Component;
 import com.aksimata.pilot.skin.FixBootstrapStylesCssResourceReference;
 import com.google.javascript.jscomp.CompilationLevel;
 
-import de.agilecoders.wicket.Bootstrap;
-import de.agilecoders.wicket.javascript.GoogleClosureJavaScriptCompressor;
-import de.agilecoders.wicket.javascript.YuiCssCompressor;
-import de.agilecoders.wicket.markup.html.RenderJavaScriptToFooterHeaderResponseDecorator;
-import de.agilecoders.wicket.markup.html.bootstrap.extensions.html5player.Html5PlayerCssReference;
-import de.agilecoders.wicket.markup.html.bootstrap.extensions.html5player.Html5PlayerJavaScriptReference;
-import de.agilecoders.wicket.markup.html.bootstrap.extensions.icon.OpenWebIconsCssReference;
-import de.agilecoders.wicket.markup.html.bootstrap.extensions.jqueryui.JQueryUIJavaScriptReference;
-import de.agilecoders.wicket.markup.html.references.BootstrapPrettifyCssReference;
-import de.agilecoders.wicket.markup.html.references.ModernizrJavaScriptReference;
-import de.agilecoders.wicket.markup.html.themes.google.GoogleTheme;
-import de.agilecoders.wicket.markup.html.themes.metro.MetroTheme;
-import de.agilecoders.wicket.markup.html.themes.wicket.WicketTheme;
-import de.agilecoders.wicket.settings.BootstrapSettings;
-import de.agilecoders.wicket.settings.BootswatchThemeProvider;
-import de.agilecoders.wicket.settings.ThemeProvider;
+import de.agilecoders.wicket.core.Bootstrap;
+import de.agilecoders.wicket.core.markup.html.RenderJavaScriptToFooterHeaderResponseDecorator;
+import de.agilecoders.wicket.core.markup.html.references.BootstrapPrettifyCssReference;
+import de.agilecoders.wicket.core.markup.html.references.ModernizrJavaScriptReference;
+import de.agilecoders.wicket.core.settings.BootstrapSettings;
+import de.agilecoders.wicket.core.settings.ThemeProvider;
+import de.agilecoders.wicket.extensions.javascript.GoogleClosureJavaScriptCompressor;
+import de.agilecoders.wicket.extensions.javascript.YuiCssCompressor;
+import de.agilecoders.wicket.extensions.markup.html.bootstrap.html5player.Html5PlayerCssReference;
+import de.agilecoders.wicket.extensions.markup.html.bootstrap.html5player.Html5PlayerJavaScriptReference;
+import de.agilecoders.wicket.extensions.markup.html.bootstrap.icon.OpenWebIconsCssReference;
+import de.agilecoders.wicket.extensions.markup.html.bootstrap.jqueryui.JQueryUIJavaScriptReference;
+import de.agilecoders.wicket.themes.markup.html.google.GoogleTheme;
+import de.agilecoders.wicket.themes.markup.html.metro.MetroTheme;
+import de.agilecoders.wicket.themes.markup.html.wicket.WicketTheme;
+import de.agilecoders.wicket.themes.settings.BootswatchThemeProvider;
 
 /**
  * @author ceefour

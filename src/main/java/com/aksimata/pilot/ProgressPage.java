@@ -7,7 +7,7 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import de.agilecoders.wicket.markup.html.bootstrap.components.ProgressBar;
+import de.agilecoders.wicket.core.markup.html.bootstrap.components.ProgressBar;
 
 
 /**
